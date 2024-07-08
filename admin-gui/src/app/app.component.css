@@ -1,0 +1,7 @@
+/* Stili di esempio per app.component */
+:host {
+    display: block;
+    text-align: center;
+    margin: 20px;
+  }
+  

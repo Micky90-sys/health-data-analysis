@@ -1,0 +1,11 @@
+<div class="container">
+    <h2>Caricamento File</h2>
+    <form (ngSubmit)="onSubmit()">
+      <input type="file" (change)="onFileSelected($event)">
+      <button type="submit" [disabled]="!selectedFile">Carica</button>
+    </form>
+    <div *ngIf="uploadSuccess" class="success-message">File caricato con successo!</div>
+    <div *ngIf="uploadError" class="error-message">Errore nel caricamento del file. Riprova.</div>
+    <a *ngIf="fileName" href="/api/download/{{fileName}}" download>Scarica</a>
+  </div>
+  
